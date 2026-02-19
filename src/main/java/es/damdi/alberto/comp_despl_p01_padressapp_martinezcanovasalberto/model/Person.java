@@ -118,4 +118,25 @@ public class Person {
     public ObjectProperty<LocalDate> birthdayProperty() {
         return birthday;
     }
+
+    public static Person fromPOJO(PersonPOJO d) {
+        Person p = new Person();
+        p.setFirstName(d.firstName);
+        p.setLastName(d.lastName);
+        p.setStreet(d.street);
+        p.setPostalCode(d.postalCode);
+        p.setCity(d.city);
+        p.setBirthday(d.birthday);
+        return p;
+    }
+    public PersonPOJO toPOJO() {
+        PersonPOJO d = new PersonPOJO ();
+        d.firstName = getFirstName();
+        d.lastName = getLastName();
+        d.street = getStreet();
+        d.postalCode = getPostalCode();
+        d.city = getCity();
+        d.birthday = getBirthday();
+        return d;
+    }
 }

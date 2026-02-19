@@ -1,10 +1,19 @@
 package es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.model.Person;
+import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.persistence.JacksonPersonRepository;
+import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.persistence.PersonRepository;
+import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.settings.AppPreferences;
 import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.view.PersonEditDialogController;
 import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.view.PersonOverviewController;
+import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.view.RootLayoutController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,12 +24,47 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import org.kordamp.bootstrapfx.BootstrapFX;
 
 public class MainApp extends Application {
 
     private Stage primaryStage;
     private BorderPane rootLayout;
     private ObservableList<Person> personData = FXCollections.observableArrayList();
+
+    /**
+     * El repositorio (JSON con Jackson)
+     */
+    private final PersonRepository repository = new JacksonPersonRepository();
+
+    /**
+     * El fichero actual asociado (si existe)
+     */
+    private File personFilePath;
+
+    /**
+     * El estado de cambios sin guardar (dirty)
+     */
+    private boolean dirty;
+    public PersonRepository getRepository() {
+        return repository;
+    }
+
+    public boolean isDirty() {
+        return dirty;
+    }
+
+    public void setDirty(boolean dirty) {
+        this.dirty = dirty;
+    }
+
+    public File getPersonFilePath() {
+        return personFilePath;
+    }
+
+    public void setPersonData(ObservableList<Person> personData) {
+        this.personData = personData;
+    }
 
     /**
      * Constructor
@@ -57,6 +101,10 @@ public class MainApp extends Application {
         initRootLayout();
 
         showPersonOverview();
+        // Dirty flag cambios en la lista
+        personData.addListener((javafx.collections.ListChangeListener<Person>) c -> setDirty(true));
+        loadOnStartup();
+
     }
 
     /**
@@ -68,11 +116,14 @@ public class MainApp extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/RootLayout.fxml"));
             rootLayout = (BorderPane) loader.load();
+            RootLayoutController controller = loader.getController();
+            controller.setMainApp(this);
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);
-            primaryStage.setScene(scene);
             this.primaryStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("/images/icono.png")));
+            scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
+            primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -144,6 +195,86 @@ public class MainApp extends Application {
     public Stage getPrimaryStage() {
         return primaryStage;
     }
+
+    /**
+     * Conecta el fichero actual con preferencias
+     */
+    public void setPersonFilePath(File file) {
+        this.personFilePath = file;
+        AppPreferences.setPersonFile(file == null ? null : file.getAbsolutePath());
+        // opcional: reflejar en el título
+        if (primaryStage != null) {
+            String name = (file == null) ? "AddressApp MAV" : "AddressApp MAV - " + file.getName();
+            primaryStage.setTitle(name);
+        }
+    }
+
+    /**
+     * Implementa loadPersonDataFromJson(File file)
+     */
+    public void loadPersonDataFromJson(File file) throws IOException {
+        // 1) Cargar desde repositorio
+        List<Person> loaded = repository.load(file);
+        // 2) IMPORTANTE: NO reasignar personData. Usar setAll.
+        // Así la TableView sigue enlazada a la misma lista.
+        personData.setAll(loaded);
+        // 3) Guardar el fichero actual (y en preferencias)
+        setPersonFilePath(file);
+        // 4) Acabamos de cargar: no hay cambios sin guardar
+        setDirty(false);
+    }
+
+    /**
+     * Implementa savePersonDataToJson(File file)
+     */
+    public void savePersonDataToJson(File file) throws IOException {
+        // 1) Guardar con el repositorio
+        repository.save(file, new ArrayList<>(personData));
+        // 2) Marcar fichero actual (y en preferencias)
+        setPersonFilePath(file);
+        // 3) Tras guardar, ya no hay cambios pendientes
+        setDirty(false);
+    }
+
+    /**
+     * Cargar el último fichero al arrancar (con preferencias)
+     */
+
+    private void loadOnStartup() {
+        // 1) si hay ruta en Preferences -> carga
+        AppPreferences.getPersonFile().ifPresentOrElse(
+                path -> {
+                    File f = new File(path);
+                    if (f.exists()) {
+                        try {
+                            loadPersonDataFromJson(f);
+                            setPersonFilePath(f);
+                        } catch (IOException e) {
+                            // si falla, cae al default
+                            loadDefaultIfExists();
+                        }
+                    } else {
+                        loadDefaultIfExists();
+                    }
+                },
+                this::loadDefaultIfExists
+        );
+    }
+    private void loadDefaultIfExists() {
+        File f = defaultJsonPath.toFile();
+        if (f.exists()) {
+            try {
+                loadPersonDataFromJson(f);
+                setPersonFilePath(f);
+            } catch (IOException ignored) {
+                // si falla, te quedas con los datos en memoria (ej. sample data)
+            }
+        } else {
+            // No existe aún: te quedas con los sample data (o lista vacía, como prefieras)
+            setPersonFilePath(f); // así autosave crea el fichero al salir
+        }
+    }
+    private final Path defaultJsonPath = Paths.get(System.getProperty("user.home"), ".addressappv2", "persons.json");
 
     public static void main(String[] args) {
         launch(args);

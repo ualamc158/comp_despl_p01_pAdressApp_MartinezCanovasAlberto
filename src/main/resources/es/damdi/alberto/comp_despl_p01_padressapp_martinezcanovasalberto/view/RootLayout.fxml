@@ -1,30 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <MenuBar BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-   </top>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="panel-title" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.view.RootLayoutController">
+    <top>
+        <MenuBar stylesheets="@DarkTheme.css" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleNew" text="New...">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="N" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open...">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="O" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="S" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleSaveAs" text="Save As...">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="S" control="ANY" meta="UP" shift="ANY" shortcut="UP" />
+                            </accelerator></MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="Q" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+<!--                        <MenuItem mnemonicParsing="false" onAction="#handleImport" text="Import CSV..." />-->
+<!--                        <MenuItem mnemonicParsing="false" onAction="#handleExport" text="Export CSV..." />-->
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+<!--                <Menu mnemonicParsing="false" text="Statistics">-->
+<!--                    <items>-->
+<!--                        <MenuItem mnemonicParsing="false" onAction="#handleShowBirthdayStatistics" text="Bar Statistics" />-->
+<!--                        <MenuItem mnemonicParsing="false" onAction="#handleShowBirthdayStatisticsLine" text="Line Statistics" />-->
+<!--                        <MenuItem mnemonicParsing="false" onAction="#handleShowBirthdayStatisticsPie" text="Pie Statistics" />-->
+<!--                        <MenuItem mnemonicParsing="false" onAction="#handleShowDonutStatistics" text="Donut Statistics" />-->
+<!--                    </items>-->
+<!--                </Menu>-->
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+<!--                        <MenuItem mnemonicParsing="false" onAction="#handleHelpHtml" text="HTML Help" />-->
+<!--                        <MenuItem mnemonicParsing="false" onAction="#handleHelpMarkdown" text="Markdown Help" />-->
+<!--                        <MenuItem mnemonicParsing="false" onAction="#handleHelpPdf" text="PDF Help" />-->
+                    </items>
+                </Menu>
+            </menus>
+            <styleClass>
+                <String fx:value="lbl-info" />
+                <String fx:value="h4" />
+            </styleClass>
+        </MenuBar>
+    </top>
 </BorderPane>
