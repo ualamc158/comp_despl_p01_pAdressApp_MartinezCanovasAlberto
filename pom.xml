@@ -42,8 +42,57 @@
       <version>2.21.0</version>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>eu.hansolo</groupId>
+      <artifactId>tilesfx</artifactId>
+      <version>17.1.17</version> </dependency>
+    <dependency>
+      <groupId>eu.hansolo</groupId>
+      <artifactId>toolbox</artifactId>
+      <version>17.0.35</version>
+    </dependency>
+    <dependency>
+      <groupId>eu.hansolo</groupId>
+      <artifactId>toolboxfx</artifactId>
+      <version>17.0.33</version>
+    </dependency>
+    <dependency>
+      <groupId>eu.hansolo.fx</groupId>
+      <artifactId>heatmap</artifactId>
+      <version>17.0.12</version>
+    </dependency>
+    <dependency>
+      <groupId>eu.hansolo.fx</groupId>
+      <artifactId>countries</artifactId>
+      <version>17.0.23</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-base</artifactId>
+      <version>21.0.6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-graphics</artifactId>
+      <version>21.0.6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-swing</artifactId>
+      <version>21.0.6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-web</artifactId>
+      <version>21.0.6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-media</artifactId>
+      <version>21.0.6</version>
+    </dependency>
 
- </dependencies>
+  </dependencies>
 
   <build>
     <plugins>

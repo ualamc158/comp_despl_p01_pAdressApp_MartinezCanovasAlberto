@@ -2,6 +2,8 @@ package es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.view;
 
 
 import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.MainApp;
+import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.model.Person;
+import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.persistence.CsvPersonRepository;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar;
@@ -10,8 +12,11 @@ import javafx.stage.FileChooser;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 public class RootLayoutController {
+    private CsvPersonRepository csvRepository = new CsvPersonRepository();
+
     private MainApp mainApp;
 
     public void setMainApp(MainApp mainApp) {
@@ -173,6 +178,101 @@ public class RootLayoutController {
         alert.setContentText(content + "\n\n" + e.getClass().getSimpleName() + ": " + e.getMessage());
         alert.showAndWait();
     }
+    //-------CSV-------
 
+
+    // Método para crear/configurar el menú (llámalo en tu initialize o método main)
+    public void setupMenuHandlers() {
+        // Si usas FXML, vincula estos métodos a los MenuItem con onAction="#handleExport"
+        // Si lo haces por código:
+        // exportItem.setOnAction(event -> handleExport());
+        // importItem.setOnAction(event -> handleImport());
+    }
+    @FXML
+    public void handleExport() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Exportar personas a CSV");
+
+        // Filtro para ver solo CSV
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Archivos CSV (*.csv)", "*.csv");
+        fileChooser.getExtensionFilters().add(extFilter);
+
+        // Mostrar diálogo de guardar sobre la ventana principal
+        File file = fileChooser.showSaveDialog(mainApp.getPrimaryStage()); // Ajusta 'mainApp' a tu referencia
+
+        if (file != null) {
+            // Asegurar extensión .csv
+            if (!file.getPath().endsWith(".csv")) {
+                file = new File(file.getPath() + ".csv");
+            }
+
+            try {
+                // Pasamos la lista de personas (ObservableList)
+                csvRepository.exportData(file, mainApp.getPersonData());
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Éxito");
+                alert.setHeaderText(null);
+                alert.setContentText("Datos exportados correctamente a Excel/CSV.");
+                alert.showAndWait();
+
+            } catch (IOException e) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setContentText("No se pudo guardar el archivo:\n" + e.getMessage());
+                alert.showAndWait();
+            }
+        }
+    }
+    @FXML
+    public void handleImport() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Importar personas desde CSV");
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Archivos CSV (*.csv)", "*.csv");
+        fileChooser.getExtensionFilters().add(extFilter);
+
+        File file = fileChooser.showOpenDialog(mainApp.getPrimaryStage());
+
+        if (file != null) {
+            try {
+                List<Person> imported = csvRepository.importData(file);
+
+                // Lógica "New": Borrar todo y añadir lo nuevo
+                mainApp.getPersonData().clear();
+                mainApp.getPersonData().addAll(imported);
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Éxito");
+                alert.setContentText("Se han importado " + imported.size() + " personas.");
+                alert.showAndWait();
+
+            } catch (IOException e) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setContentText("No se pudo leer el archivo:\n" + e.getMessage());
+                alert.showAndWait();
+            }
+        }
+    }
+    /**
+     * Opens the birthday statistics.
+     */
+    @FXML
+    private void handleShowBirthdayStatistics() {
+        mainApp.showBirthdayStatistics();
+    }
+    @FXML
+    private void handleShowBirthdayStatisticsLine() {
+        mainApp.showBirthdayStatisticsLine();
+    }
+    @FXML
+    private void handleShowBirthdayStatisticsPie() {
+        mainApp.showBirthdayStatisticsPie();
+    }
+
+    @FXML
+    private void handleShowDonutStatistics() {
+        mainApp.showDonutStatistics();
+    }
 
 }

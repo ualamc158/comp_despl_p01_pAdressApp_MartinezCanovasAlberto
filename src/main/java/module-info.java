@@ -7,6 +7,11 @@ module es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto {
     requires org.kordamp.bootstrapfx.core;
     requires java.prefs;
     requires java.desktop;
+    requires eu.hansolo.tilesfx;
+    requires javafx.swing;
+
+
+
 
     opens es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.model;
     opens es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.persistence;

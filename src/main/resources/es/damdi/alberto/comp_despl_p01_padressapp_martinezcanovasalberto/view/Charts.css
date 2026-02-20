@@ -1,0 +1,133 @@
+/* ==================================================================
+ * CHARTS.CSS
+ * Estilos específicos para PieChart y LineChart (Alto Contraste)
+ * ================================================================== */
+
+/* --- CONFIGURACIÓN GENERAL DEL GRÁFICO --- */
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: #2a2828;
+}
+
+.chart-content {
+    -fx-padding: 10px;
+}
+
+/* Título del gráfico */
+.chart-title {
+    -fx-text-fill: white; /* Blanco puro para máximo contraste */
+    -fx-font-size: 1.6em;
+    -fx-font-family: "Segoe UI Light";
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 1, 1); /* Sombra para separar del fondo */
+}
+
+/* Fondo donde se dibujan las líneas/barras */
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+/* --- LEYENDA (LEGEND) --- */
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+}
+
+.chart-legend-item {
+    -fx-text-fill: #f0f0f0; /* Blanco casi puro */
+    -fx-font-size: 0.9em;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.chart-legend-item-symbol {
+    -fx-background-radius: 50%;
+}
+
+/* --- EJES (AXIS) - Para LineChart y BarChart --- */
+.axis {
+    -fx-tick-label-fill: #ffffff; /* Texto de los ejes en blanco brillante */
+    -fx-font-size: 0.85em;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.axis-label {
+    -fx-text-fill: #ffa726; /* Naranja vibrante para el título del eje */
+}
+
+/* Color de las líneas de los ejes y las marcas (ticks) */
+.axis-tick-mark, .axis-minor-tick-mark {
+    -fx-stroke: #b0b0b0; /* Gris claro, más visible que antes */
+}
+
+/* Líneas horizontales/verticales de fondo (grid) */
+.chart-vertical-grid-lines, .chart-horizontal-grid-lines {
+    -fx-stroke: #606060; /* Un gris medio, más visible que el #444 anterior */
+    -fx-stroke-dash-array: 2 5;
+}
+
+/* ==================================================================
+ * ESTILOS ESPECÍFICOS PARA PIE CHART
+ * ================================================================== */
+
+/* Texto de las etiquetas conectadas al "quesito" */
+.chart-pie-label {
+    -fx-fill: #ffffff;
+    -fx-font-size: 0.9em;
+    -fx-font-weight: bold; /* Negrita para que se lea mejor */
+}
+
+/* La línea que une el texto con el sector */
+.chart-pie-label-line {
+    -fx-stroke: #b0b0b0;
+}
+
+/* COLORES VIBRANTES (PALETA DE ALTO CONTRASTE)
+   Se usan colores más saturados para que destaquen sobre fondo oscuro
+*/
+.default-color0.chart-pie { -fx-pie-color: #ffa726; } /* Naranja Vibrante */
+.default-color1.chart-pie { -fx-pie-color: #29b6f6; } /* Azul Cielo Brillante */
+.default-color2.chart-pie { -fx-pie-color: #ef5350; } /* Rojo/Rosa Intenso */
+.default-color3.chart-pie { -fx-pie-color: #66bb6a; } /* Verde Esmeralda */
+.default-color4.chart-pie { -fx-pie-color: #ab47bc; } /* Violeta Brillante */
+.default-color5.chart-pie { -fx-pie-color: #ffca28; } /* Amarillo Ámbar */
+
+/* Efecto Hover: Resaltar sector al pasar el ratón */
+.chart-pie:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.3), 15, 0, 0, 0); /* Brillo blanco */
+}
+
+/* ==================================================================
+ * ESTILOS ESPECÍFICOS PARA LINE CHART
+ * ================================================================== */
+
+/* La línea principal del gráfico */
+.chart-series-line {
+    -fx-stroke: #ffa726; /* Naranja Vibrante */
+    -fx-stroke-width: 3px; /* Un poco más gruesa */
+    /* Efecto neón: sombra del mismo color que la línea */
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 167, 38, 0.6), 10, 0, 0, 0);
+}
+
+/* Los puntos (símbolos) en la línea */
+.chart-line-symbol {
+    -fx-background-color: #ffa726, #1d1d1d; /* Borde naranja, centro oscuro */
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 10px;
+    -fx-padding: 6px; /* Puntos un poco más grandes */
+}
+
+/* Efecto al pasar el ratón por un punto */
+.chart-line-symbol:hover {
+    -fx-background-color: #ffffff; /* Blanco brillante al pasar el ratón */
+    -fx-scale-x: 1.5;
+    -fx-scale-y: 1.5;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, white, 10, 0.5, 0, 0);
+}
+/* ==================================================================
+ * ESTILOS ESPECÍFICOS PARA TILESFX (DONUT CHART)
+ * ================================================================== */
+.tile {
+    -fx-background-color: #2a2828;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import eu.hansolo.tilesfx.Tile?>
+
+<AnchorPane prefHeight="450.0" prefWidth="620.0" styleClass="background" stylesheets="@Charts.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.view.DonutCharStatisticsController">
+    <children>
+        <Tile fx:id="donutTile" prefHeight="450.0" prefWidth="620.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+    </children>
+</AnchorPane>

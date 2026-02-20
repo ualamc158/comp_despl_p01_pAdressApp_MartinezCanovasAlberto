@@ -11,9 +11,7 @@ import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.model.P
 import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.persistence.JacksonPersonRepository;
 import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.persistence.PersonRepository;
 import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.settings.AppPreferences;
-import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.view.PersonEditDialogController;
-import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.view.PersonOverviewController;
-import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.view.RootLayoutController;
+import es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.view.*;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -170,7 +168,9 @@ public class MainApp extends Application {
             dialogStage.setTitle("Edit Person");
             dialogStage.initModality(Modality.WINDOW_MODAL);
             dialogStage.initOwner(primaryStage);
+            dialogStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("/images/icono.png")));
             Scene scene = new Scene(page);
+            scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
             dialogStage.setScene(scene);
 
             // Set the person into the controller.
@@ -275,6 +275,107 @@ public class MainApp extends Application {
         }
     }
     private final Path defaultJsonPath = Paths.get(System.getProperty("user.home"), ".addressappv2", "persons.json");
+
+    /**
+     * Opens a dialog to show birthday statistics.
+     */
+    public void showBirthdayStatistics() {
+        try {
+            // Load the fxml file and create a new stage for the popup.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/BirthdayStatistics.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Birthday Statistics");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            dialogStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("/images/icono.png")));
+
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            // Set the persons into the controller.
+            BirthdayStatisticsController controller = loader.getController();
+            controller.setPersonData(personData);
+
+            dialogStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public void showBirthdayStatisticsLine() {
+        try {
+            // Load the fxml file and create a new stage for the popup.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/LineCharStatistics.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Birthday Statistics");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            dialogStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("/images/icono.png")));
+
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            // Set the persons into the controller.
+            LineCharStatisticsController controller = loader.getController();
+            controller.setPersonData(personData);
+
+            dialogStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public void showBirthdayStatisticsPie() {
+        try {
+            // Load the fxml file and create a new stage for the popup.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/PieCharStatistics.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Generational Statistics");
+//            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            dialogStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("/images/icono.png")));
+
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            // Set the persons into the controller.
+            PieCharStatisticsController controller = loader.getController();
+            controller.setPersonData(personData);
+
+            dialogStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public void showDonutStatistics() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/DonutCharStatistics.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Donut Statistics (TilesFX)");
+            dialogStage.initOwner(primaryStage);
+            dialogStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("/images/icono.png")));
+
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            DonutCharStatisticsController controller = loader.getController();
+            controller.setPersonData(personData);
+
+            dialogStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void main(String[] args) {
         launch(args);
