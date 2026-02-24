@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d866ff1-0135-4d2a-b1b3-b36ca3682568" name="Changes" comment="Estadísticas apartado 6">
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/LaunchMain.java" afterDir="false" />
+    <list default="true" id="1d866ff1-0135-4d2a-b1b3-b36ca3682568" name="Changes" comment="Despliegue apartado 7">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/PieCharStatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/PieCharStatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/BirthdayStatistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/BirthdayStatistics.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/LineCharStatistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/LineCharStatistics.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/LaunchMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/LaunchMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/persistence/CsvPersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/persistence/CsvPersonRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +61,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.LaunchMain.executor": "Run",
     "Application.MainApp.executor": "Run",
     "Maven.comp_despl_p01_pAdressApp_MartinezCanovasAlberto [clean].executor": "Run",
     "Maven.comp_despl_p01_pAdressApp_MartinezCanovasAlberto [install].executor": "Run",
@@ -131,7 +129,7 @@
       <workItem from="1770378867299" duration="2818000" />
       <workItem from="1771494489811" duration="9347000" />
       <workItem from="1771579207856" duration="10595000" />
-      <workItem from="1771953714892" duration="8056000" />
+      <workItem from="1771953714892" duration="8937000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <option name="closed" value="true" />
@@ -189,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771589358114</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Despliegue apartado 7">
+      <option name="closed" value="true" />
+      <created>1771974520887</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1771974520888</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +217,7 @@
     <MESSAGE value="Commit 19/02/2026 Hasta apartado 4 Hojas de estilo CSS" />
     <MESSAGE value="Persistencia de datos con JSON apartado 5" />
     <MESSAGE value="Estadísticas apartado 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Estadísticas apartado 6" />
+    <MESSAGE value="Despliegue apartado 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Despliegue apartado 7" />
   </component>
 </project>

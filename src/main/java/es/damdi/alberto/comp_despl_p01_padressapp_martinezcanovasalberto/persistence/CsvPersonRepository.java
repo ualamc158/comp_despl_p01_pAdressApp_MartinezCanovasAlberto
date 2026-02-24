@@ -59,7 +59,7 @@ public class CsvPersonRepository {
                     continue;
                 }
 
-                String[] data = line.split(DELIMITER);
+                String[] data = line.split(DELIMITER, -1);
 
 
                 if (data.length >= 6) {
