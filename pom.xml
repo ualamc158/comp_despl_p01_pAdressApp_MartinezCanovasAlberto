@@ -6,12 +6,17 @@
 
   <groupId>es.damdi.alberto</groupId>
   <artifactId>comp_despl_p01_pAdressApp_MartinezCanovasAlberto</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <name>comp_despl_p01_pAdressApp_MartinezCanovasAlberto</name>
+  <version>1.0-RELEASE</version>
+
+  <name>AddressApp V2</name>
+  <description>Aplicación de direcciones en JavaFX con Maven</description>
+  <url>https://github.com/ualamc158/comp_despl_p01_pAdressApp_MartinezCanovasAlberto</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-<junit.version>5.12.1</junit.version>  </properties>
+    <junit.version>5.12.1</junit.version>
+    <maven.compiler.release>25</maven.compiler.release>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -29,13 +34,11 @@
       <artifactId>bootstrapfx-core</artifactId>
       <version>0.4.0</version>
     </dependency>
-    <!-- Source: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
       <version>2.21.0</version>
     </dependency>
-    <!-- Source: https://mvnrepository.com/artifact/com.fasterxml.jackson.datatype/jackson-datatype-jsr310 -->
     <dependency>
       <groupId>com.fasterxml.jackson.datatype</groupId>
       <artifactId>jackson-datatype-jsr310</artifactId>
@@ -45,7 +48,8 @@
     <dependency>
       <groupId>eu.hansolo</groupId>
       <artifactId>tilesfx</artifactId>
-      <version>17.1.17</version> </dependency>
+      <version>17.1.17</version>
+    </dependency>
     <dependency>
       <groupId>eu.hansolo</groupId>
       <artifactId>toolbox</artifactId>
@@ -91,7 +95,6 @@
       <artifactId>javafx-media</artifactId>
       <version>21.0.6</version>
     </dependency>
-
   </dependencies>
 
   <build>
@@ -111,7 +114,6 @@
         <version>0.0.8</version>
         <executions>
           <execution>
-            <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
               <mainClass>es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto/es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.MainApp</mainClass>
@@ -125,6 +127,73 @@
           </execution>
         </executions>
       </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.6.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.LaunchMain</mainClass>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.21.0</version>
+        <configuration>
+          <locales>es,fr</locales>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.12.0</version>
+        <configuration>
+          <release>${maven.compiler.release}</release>
+          <sourceFileExcludes>
+            <exclude>module-info.java</exclude>
+          </sourceFileExcludes>
+          <additionalOptions>
+            <additionalOption>--show-packages</additionalOption>
+            <additionalOption>all</additionalOption>
+          </additionalOptions>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.12.0</version>
+        <configuration>
+          <release>${maven.compiler.release}</release>
+          <sourceFileExcludes>
+            <exclude>module-info.java</exclude>
+          </sourceFileExcludes>
+          <additionalOptions>
+            <additionalOption>--show-packages</additionalOption>
+            <additionalOption>all</additionalOption>
+          </additionalOptions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+
 </project>

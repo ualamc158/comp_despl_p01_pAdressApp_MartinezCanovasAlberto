@@ -4,24 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d866ff1-0135-4d2a-b1b3-b36ca3682568" name="Changes" comment="Persistencia de datos con JSON apartado 5">
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/BirthdayStatisticsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/DonutCharStatisticsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/LineCharStatisticsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/PieCharStatisticsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/BirthdayStatistics.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/Charts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/DonutCharStatistics.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/LineCharStatistics.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/PieCharStatistics.fxml" afterDir="false" />
+    <list default="true" id="1d866ff1-0135-4d2a-b1b3-b36ca3682568" name="Changes" comment="Estadísticas apartado 6">
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/LaunchMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/RootLayoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/RootLayoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/PersonEditDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/PersonEditDialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/PersonOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/PersonOverview.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/RootLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/RootLayout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/PieCharStatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/PieCharStatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/BirthdayStatistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/BirthdayStatistics.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/LineCharStatistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/LineCharStatistics.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,30 +62,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.comp_despl_p01_pAdressApp_MartinezCanovasAlberto [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.comp_despl_p01_pAdressApp_MartinezCanovasAlberto [install].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;W:/dev2/workspace/comp_despl_p01_pAdressApp_MartinezCanovasAlberto/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MainApp.executor": "Run",
+    "Maven.comp_despl_p01_pAdressApp_MartinezCanovasAlberto [clean].executor": "Run",
+    "Maven.comp_despl_p01_pAdressApp_MartinezCanovasAlberto [install].executor": "Run",
+    "Maven.comp_despl_p01_pAdressApp_MartinezCanovasAlberto [org.apache.maven.plugins:maven-javadoc-plugin:3.12.0:javadoc].executor": "Run",
+    "Maven.comp_despl_p01_pAdressApp_MartinezCanovasAlberto [org.apache.maven.plugins:maven-site-plugin:3.21.0:site].executor": "Run",
+    "Maven.comp_despl_p01_pAdressApp_MartinezCanovasAlberto [package].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "W:/dev2/workspace/comp_despl_p01_pAdressApp_MartinezCanovasAlberto/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="W:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\src\main\resources\es\damdi\alberto\comp_despl_p01_padressapp_martinezcanovasalberto\view" />
@@ -106,6 +98,7 @@
       <recent name="W:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\src\main\java\es\damdi\alberto\comp_despl_p01_padressapp_martinezcanovasalberto\persistence" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\deploy\instalador" />
       <recent name="W:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\src\main\resources\images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -116,8 +109,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.240" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.240" />
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
       </set>
     </attachedChunks>
   </component>
@@ -137,7 +130,8 @@
       <workItem from="1770366650978" duration="1116000" />
       <workItem from="1770378867299" duration="2818000" />
       <workItem from="1771494489811" duration="9347000" />
-      <workItem from="1771579207856" duration="6665000" />
+      <workItem from="1771579207856" duration="10595000" />
+      <workItem from="1771953714892" duration="8056000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <option name="closed" value="true" />
@@ -187,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771502793471</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Estadísticas apartado 6">
+      <option name="closed" value="true" />
+      <created>1771589358114</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1771589358114</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +210,7 @@
     <MESSAGE value="Commit inicial" />
     <MESSAGE value="Commit 19/02/2026 Hasta apartado 4 Hojas de estilo CSS" />
     <MESSAGE value="Persistencia de datos con JSON apartado 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Persistencia de datos con JSON apartado 5" />
+    <MESSAGE value="Estadísticas apartado 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Estadísticas apartado 6" />
   </component>
 </project>

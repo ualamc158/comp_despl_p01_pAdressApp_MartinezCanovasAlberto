@@ -7,6 +7,9 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.chart.PieChart;
 
+/**
+ * The type Pie char statistics controller.
+ */
 public class PieCharStatisticsController {
 
     @FXML

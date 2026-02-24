@@ -1,0 +1,40 @@
+
+
+Version:	3.50
+CmdLine:	F:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\deploy\AdressAppEjecutable.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	F:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\deploy\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = C:\dev2\jdk\jdk-25
+Substitute:	PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\dev2\jdk\jdk-25\bin;C:\dev2\apache-maven-3.9.12\bin;C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-11.0.24.8-hotspot\bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Eclipse Adoptium\jdk-17.0.6.10-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\Albertiko\scoop\apps\python313\current\Scripts;C:\Users\Albertiko\scoop\apps\python313\current;C:\Users\Albertiko\scoop\apps\git\current\bin;C:\Users\Albertiko\scoop\shims;C:\Users\Albertiko\AppData\Local\Microsoft\WindowsApps;C:\Users\Albertiko\AppData\Local\GitHubDesktop\bin;C:\Users\Albertiko\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Albertiko\AppData\Local\Python\bin;C:\Users\Albertiko\AppData\Local\Microsoft\WinGet\Links;C:\dev2\jdk\jdk-25\bin
+JRE paths:	C:\dev2\jdk\jdk-25;C:\Program Files\Common Files\Oracle\Java\javapath;C:\dev2\jdk\jdk-25\bin;C:\dev2\apache-maven-3.9.12\bin;C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-11.0.24.8-hotspot\bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Eclipse Adoptium\jdk-17.0.6.10-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\Albertiko\scoop\apps\python313\current\Scripts;C:\Users\Albertiko\scoop\apps\python313\current;C:\Users\Albertiko\scoop\apps\git\current\bin;C:\Users\Albertiko\scoop\shims;C:\Users\Albertiko\AppData\Local\Microsoft\WindowsApps;C:\Users\Albertiko\AppData\Local\GitHubDesktop\bin;C:\Users\Albertiko\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Albertiko\AppData\Local\Python\bin;C:\Users\Albertiko\AppData\Local\Microsoft\WinGet\Links;C:\dev2\jdk\jdk-25\bin
+Check launcher:	C:\dev2\jdk\jdk-25\bin\javaw.exe (OK)
+Version string: 1.025.000 / 64-Bit (OK)
+Launcher:	C:\dev2\jdk\jdk-25\bin\javaw.exe
+Launcher args:	-jar "F:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\deploy\AdressAppEjecutable.exe"
+Args length:	104/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	F:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\deploy\AdressAppEjecutable.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	F:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\deploy\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = C:\dev2\jdk\jdk-25
+Substitute:	PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\dev2\jdk\jdk-25\bin;C:\dev2\apache-maven-3.9.12\bin;C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-11.0.24.8-hotspot\bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Eclipse Adoptium\jdk-17.0.6.10-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\Albertiko\scoop\apps\python313\current\Scripts;C:\Users\Albertiko\scoop\apps\python313\current;C:\Users\Albertiko\scoop\apps\git\current\bin;C:\Users\Albertiko\scoop\shims;C:\Users\Albertiko\AppData\Local\Microsoft\WindowsApps;C:\Users\Albertiko\AppData\Local\GitHubDesktop\bin;C:\Users\Albertiko\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Albertiko\AppData\Local\Python\bin;C:\Users\Albertiko\AppData\Local\Microsoft\WinGet\Links;C:\dev2\jdk\jdk-25\bin
+JRE paths:	C:\dev2\jdk\jdk-25;C:\Program Files\Common Files\Oracle\Java\javapath;C:\dev2\jdk\jdk-25\bin;C:\dev2\apache-maven-3.9.12\bin;C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-11.0.24.8-hotspot\bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Eclipse Adoptium\jdk-17.0.6.10-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\Albertiko\scoop\apps\python313\current\Scripts;C:\Users\Albertiko\scoop\apps\python313\current;C:\Users\Albertiko\scoop\apps\git\current\bin;C:\Users\Albertiko\scoop\shims;C:\Users\Albertiko\AppData\Local\Microsoft\WindowsApps;C:\Users\Albertiko\AppData\Local\GitHubDesktop\bin;C:\Users\Albertiko\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Albertiko\AppData\Local\Python\bin;C:\Users\Albertiko\AppData\Local\Microsoft\WinGet\Links;C:\dev2\jdk\jdk-25\bin
+Check launcher:	C:\dev2\jdk\jdk-25\bin\javaw.exe (OK)
+Version string: 1.025.000 / 64-Bit (OK)
+Launcher:	C:\dev2\jdk\jdk-25\bin\javaw.exe
+Launcher args:	-jar "F:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\deploy\AdressAppEjecutable.exe"
+Args length:	104/32768 chars
+Exit code:	0

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>F:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\target\comp_despl_p01_pAdressApp_MartinezCanovasAlberto-1.0-RELEASE.jar</jar>
+  <outfile>F:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\deploy\AdressAppEjecutable.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>https://www.oracle.com/es/java/technologies/downloads/</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>F:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\deploy\icono.ico</icon>
+  <jre>
+    <path>%JAVA_HOME%;%PATH%</path>
+    <requiresJdk>false</requiresJdk>
+    <requires64Bit>false</requires64Bit>
+    <minVersion></minVersion>
+    <maxVersion></maxVersion>
+  </jre>
+</launch4jConfig>
