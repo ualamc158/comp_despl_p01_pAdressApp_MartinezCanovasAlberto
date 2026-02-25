@@ -18,6 +18,13 @@
     <maven.compiler.release>25</maven.compiler.release>
   </properties>
 
+  <repositories>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
+
   <dependencies>
     <dependency>
       <groupId>org.openjfx</groupId>
@@ -94,6 +101,16 @@
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-media</artifactId>
       <version>21.0.6</version>
+    </dependency>
+    <dependency>
+      <groupId>com.vladsch.flexmark</groupId>
+      <artifactId>flexmark-all</artifactId>
+      <version>0.64.8</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.Dansoftowner</groupId>
+      <artifactId>PDFViewerFX</artifactId>
+      <version>0.8</version>
     </dependency>
   </dependencies>
 

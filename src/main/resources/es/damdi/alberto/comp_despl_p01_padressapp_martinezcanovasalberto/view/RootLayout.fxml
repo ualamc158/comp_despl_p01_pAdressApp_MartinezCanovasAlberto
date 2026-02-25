@@ -7,7 +7,7 @@
 <?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="panel-title" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.view.RootLayoutController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="panel-title" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.view.RootLayoutController">
     <top>
         <MenuBar BorderPane.alignment="CENTER">
             <menus>
@@ -51,10 +51,18 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-<!--                        <MenuItem mnemonicParsing="false" onAction="#handleHelpHtml" text="HTML Help" />-->
-<!--                        <MenuItem mnemonicParsing="false" onAction="#handleHelpMarkdown" text="Markdown Help" />-->
-<!--                        <MenuItem mnemonicParsing="false" onAction="#handleHelpPdf" text="PDF Help" />-->
+                        <MenuItem mnemonicParsing="false" onAction="#handleHelpHtml" text="HTML Help">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="H" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator></MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleHelpMarkdown" text="Markdown Help">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="M" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator></MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleHelpPdf" text="PDF Help">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="P" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator></MenuItem>
                     </items>
                 </Menu>
             </menus>

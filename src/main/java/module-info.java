@@ -9,8 +9,9 @@ module es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto {
     requires java.desktop;
     requires eu.hansolo.tilesfx;
     requires javafx.swing;
-
-
+    requires flexmark;
+    requires flexmark.util.ast;
+    requires PDFViewerFX;
 
 
     opens es.damdi.alberto.comp_despl_p01_padressapp_martinezcanovasalberto.model;

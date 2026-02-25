@@ -9,6 +9,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
@@ -273,6 +274,41 @@ public class RootLayoutController {
     @FXML
     private void handleShowDonutStatistics() {
         mainApp.showDonutStatistics();
+    }
+
+    // -------------------- HELP ACTIONS --------------------
+
+    @FXML
+    private void handleHelpHtml() {
+        try {
+            // Asegúrate de importar tu clase HelpViewer correctamente
+            HelpViewer helpViewer = new HelpViewer();
+            helpViewer.start(new Stage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void handleHelpMarkdown() {
+        try {
+            // Asegúrate de importar tu clase MarkdownHelp correctamente
+            MarkdownHelp markdownHelp = new MarkdownHelp();
+            markdownHelp.start(new Stage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void handleHelpPdf() {
+        try {
+            // Asegúrate de importar tu clase PDFHelpViewer correctamente
+            PDFHelpViewer pdfHelpViewer = new PDFHelpViewer();
+            pdfHelpViewer.start(new     Stage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

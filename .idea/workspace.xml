@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d866ff1-0135-4d2a-b1b3-b36ca3682568" name="Changes" comment="Despliegue apartado 7">
+    <list default="true" id="1d866ff1-0135-4d2a-b1b3-b36ca3682568" name="Changes" comment="Despliegue apartado 7 arreglos">
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/HelpViewer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/MarkdownHelp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/PDFHelpViewer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/help/html/css/estilos.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/help/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/help/markdown/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/help/pdf/ayuda.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/LaunchMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/LaunchMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/persistence/CsvPersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/persistence/CsvPersonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/instalador/AdressApp/AdressAppEjecutable.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/instalador/AdressApp/unins000.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/instalador/AdressApp/unins000.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/RootLayoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/RootLayoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/RootLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view/RootLayout.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,23 +90,23 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "W:/dev2/workspace/comp_despl_p01_pAdressApp_MartinezCanovasAlberto/src/main/resources/es/damdi/alberto/comp_despl_p01_padressapp_martinezcanovasalberto/view",
+    "last_opened_file_path": "F:/dev2/workspace/comp_despl_p01_pAdressApp_MartinezCanovasAlberto/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.JavaFX",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\src\main\resources" />
+      <recent name="F:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\src\main\java\es\damdi\alberto\comp_despl_p01_padressapp_martinezcanovasalberto\view" />
       <recent name="W:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\src\main\resources\es\damdi\alberto\comp_despl_p01_padressapp_martinezcanovasalberto\view" />
       <recent name="W:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\src\main\java\es\damdi\alberto\comp_despl_p01_padressapp_martinezcanovasalberto\view" />
       <recent name="W:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\src\main\java\es\damdi\alberto\comp_despl_p01_padressapp_martinezcanovasalberto" />
-      <recent name="W:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\src\main\java\es\damdi\alberto\comp_despl_p01_padressapp_martinezcanovasalberto\model" />
-      <recent name="W:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\src\main\java\es\damdi\alberto\comp_despl_p01_padressapp_martinezcanovasalberto\persistence" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\dev2\workspace\comp_despl_p01_pAdressApp_MartinezCanovasAlberto\deploy\instalador" />
@@ -129,7 +142,8 @@
       <workItem from="1770378867299" duration="2818000" />
       <workItem from="1771494489811" duration="9347000" />
       <workItem from="1771579207856" duration="10595000" />
-      <workItem from="1771953714892" duration="8937000" />
+      <workItem from="1771953714892" duration="10133000" />
+      <workItem from="1772004370003" duration="2291000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <option name="closed" value="true" />
@@ -195,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771974520888</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Despliegue apartado 7 arreglos">
+      <option name="closed" value="true" />
+      <created>1771975199165</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1771975199166</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +240,7 @@
     <MESSAGE value="Persistencia de datos con JSON apartado 5" />
     <MESSAGE value="Estadísticas apartado 6" />
     <MESSAGE value="Despliegue apartado 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="Despliegue apartado 7" />
+    <MESSAGE value="Despliegue apartado 7 arreglos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Despliegue apartado 7 arreglos" />
   </component>
 </project>

@@ -204,7 +204,7 @@ public class MainApp extends Application {
         AppPreferences.setPersonFile(file == null ? null : file.getAbsolutePath());
         // opcional: reflejar en el título
         if (primaryStage != null) {
-            String name = (file == null) ? "AddressApp MAV" : "AddressApp MAV - " + file.getName();
+            String name = (file == null) ? "AdressApp AMC" : "AdressApp AMC - " + file.getName();
             primaryStage.setTitle(name);
         }
     }
